@@ -16,7 +16,9 @@
   },
   "packageManager": "pnpm@10.24.0",
   "dependencies": {
-    "vue": "^3.5.32"
+    "pinia": "^3.0.4",
+    "vue": "^3.5.32",
+    "vue-router": "^5.0.4"
   },
   "devDependencies": {
     "@types/node": "^24.12.2",
