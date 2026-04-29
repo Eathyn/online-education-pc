@@ -1,0 +1,31 @@
+# 告诉所有编辑器的 EditorConfig 插件，这是项目的根目录，停止向父级目录继续查找配置
+root = true
+
+# 全局通用配置 (匹配所有文件)
+[*]
+# 设置字符编码为 utf-8 (防中文乱码)
+charset = utf-8
+# 统一使用空格缩进 (前端主流标准)
+indent_style = space
+# 统一缩进 2 个空格 (Vue / TS / Vite 官方推荐)
+indent_size = 2
+# 统一换行符为 LF (Linux/Mac 标准，极度关键，防止 Windows 协作时 Git 疯狂冲突)
+end_of_line = lf
+# 在文件末尾始终插入一个空行 (POSIX 标准，防止 Git 报 `\ No newline at end of file` 警告)
+insert_final_newline = true
+# 自动删除每一行尾部的多余空格 (保持代码整洁，减小文件体积)
+trim_trailing_whitespace = true
+
+# 3. 针对 Markdown 文件的特殊处理
+[*.md]
+# Markdown 语法中，行尾连续两个空格代表强制换行，因此必须关闭尾部空格修剪
+trim_trailing_whitespace = false
+
+# 4. 针对 Shell 和 Makefile 脚本的防御性配置
+[Makefile]
+# Makefile 语法严格要求命令前必须是真实的 Tab 键，绝不能是空格
+indent_style = tab
+
+[*.sh]
+# 确保在 Windows 下编写的 Shell 脚本也能在 Linux/Docker 中正常运行
+end_of_line = lf

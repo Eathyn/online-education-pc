@@ -1,0 +1,9 @@
+# --- 支持 ESM 的基线的主流 PC 桌面端浏览器 ---
+Chrome >= 87
+Edge >= 88
+Firefox >= 78
+Safari >= 14.1
+
+# --- 全局防御与清理 ---
+not dead
+not op_mini all
